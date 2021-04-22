@@ -8,7 +8,7 @@
     
     <div fxFlex="100">
         <div>
-          <h3>{{dish.name | uppercase}}</h3>
+            <h3 *ngIf="dish">{{dish.name | uppercase}}</h3>
           <hr>
         </div>
       </div>
@@ -18,7 +18,7 @@
   <div fxFlex="40">
         <mat-card>
             <mat-card-header>
-                <mat-card-title><h3>{{dish.name | uppercase}}</h3></mat-card-title>
+                <mat-card-title><h3 *ngIf="dish">{{dish.name | uppercase}}</h3></mat-card-title>
             </mat-card-header>
             <picture>
                 <source media='(min-width:0px)' srcset={{dish.image}}>
