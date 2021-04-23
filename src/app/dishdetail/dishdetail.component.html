@@ -15,7 +15,7 @@
 
 
 
-  <div fxFlex="40">
+  <div *ngIf="dish" fxFlex="40">
         <mat-card>
             <mat-card-header>
                 <mat-card-title><h3 *ngIf="dish">{{dish.name | uppercase}}</h3></mat-card-title>
@@ -34,8 +34,11 @@
               </mat-card-actions>
         </mat-card>
   </div>
+  <div [hidden]="dish">
+    <mat-spinner></mat-spinner><h4>Loading Dish. . . Please Wait</h4>
+  </div>
 
-  <div fxFlex="40">
+  <div *ngIf="dish" fxFlex="40">
         
         <mat-list>
             <h1>Comments</h1>
@@ -46,6 +49,9 @@
             </mat-list-item>
 
         </mat-list>
+  </div>
+  <div [hidden]="dish">
+    <mat-spinner></mat-spinner><h4>Loading Comments . . . Please Wait</h4>
   </div>
 
 </div>
