@@ -27,10 +27,12 @@
             <mat-card-content>
                 <p>{{dish.description}}</p>
             </mat-card-content>
-            <mat-card-actions>
+            <mat-card-actions fxLayoutAlign="space-around center">
+                <button class="card-button" mat-button [routerLink]="['/dishdetail', prev]"><span class="fa fa-chevron-left fa-lg"></span></button>
                 <button class="card-button" mat-button (click)="goBack()">BACK</button>
                 <button class="card-button" mat-button>LIKE</button>
                 <button class="card-button" mat-button>SHARE</button>
+                <button class="card-button" mat-button [routerLink]="['/dishdetail', next]"><span class="fa fa-chevron-right fa-lg"></span></button>
               </mat-card-actions>
         </mat-card>
   </div>
