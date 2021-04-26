@@ -19,7 +19,7 @@
                 <mat-card-title><h3 *ngIf="dish">{{dish.name | uppercase}}</h3></mat-card-title>
             </mat-card-header>
             <picture>
-                <source media='(min-width:0px)' srcset={{dish.image}}>
+                <source media='(min-width:0px)' srcset="{{ BaseURL + dish.image }}">
                 <img mat-card-image src="" alt={{dish.name}}>
             </picture>
             <mat-card-content>
